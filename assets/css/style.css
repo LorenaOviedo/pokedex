@@ -41,7 +41,7 @@ body{
     text-align: center;
     border-color: rgb(212, 205, 205);
     margin-left: 25%;
-    font-family:'Segoe UI';
+    font-family: tommy;
     font-size:medium;
 }
 
@@ -55,7 +55,7 @@ textarea:focus, input:focus, input[type]:focus {
     height: 40%;
     border-radius: 10px;
     border: transparent;    
-    font-family:'Segoe UI';
+    font-family: tommy;
     font-weight: bold;
     color: white;
     font-size: 100%;
@@ -430,6 +430,16 @@ textarea:focus, input:focus, input[type]:focus {
     src: url("/assets/fonts/GameBoy.ttf");
 }
 
+@font-face{
+    font-family: 'tommy';
+    src: url("/assets/fonts/Tommy.otf");
+}
+
+@font-face{
+    font-family: 'opens';
+    src: url("/assets/fonts/OpenSans.ttf");
+}
+
 /*Pantalla de caracteristicas*/
 .contenedor-pantalla-caracteristicas{
     display: flex;
@@ -593,6 +603,6 @@ footer{
 .pie{
     text-align: center;
     margin-top: 1.5%;
-    font-family: 'Segoe UI';
+    font-family: opens;
     font-size:small;
 }
