@@ -1,5 +1,5 @@
 # Pokédex
-Construcción de un Pokédex que consume una API mediante JS.
+Construcción de una Pokédex que consume una API mediante JS.
 
 [Ver aquí](http://pokedex-app.atwebpages.com/)
 
