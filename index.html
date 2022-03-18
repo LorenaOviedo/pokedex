@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<html lang="es">
+    <head>
+        <meta http-equiv="Content-type" content="text/html"; charset="uff-8"/>
+        <meta name="viewpoint" content="width=diveci-width, initial-scale=1">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <script src="/pokedex.js"></script>
+        <title>Pokedex</title>
+    </head>
+<body>
+    <div class="intro-poke">
+        <div class="logo">
+            <img src="assets/images/logo.png" width="20%" height="60%">
+        </div>
+        <div class="busqueda">
+            <input id="entrada" name="Entrada" type="text" placeholder="Nombre/ID"></input>
+            <!--Se llama la función en el JS-->
+            <button id="go" onclick="BuscarPokemon()">Go</button>
+        </div>
+    </div>
+    <div id="pokedex">
+        <!--Inicia panel izquierdo-->
+        <div id="panel-izquierdo">
+            <div class="contenedor-superior">
+            <svg class=svg-luces viewBox="0 0 500 150" preserveAspectRatio="none" width="225" height="70" ;>
+                <path d="M-3.38,139.64 C308.13,166.30 264.10,38.98 590.00,65.63 L500.00,-2.47 L-2.25,-2.44 Z"
+                    style="stroke: #4b0712; fill: none; stroke-width:4">      
+                </path>
+            </svg>
+                <div class="contenedor-luces">
+                    <div class="borde-grande-blanco">
+                        <div class="luz-grande-azul">
+                            <div class="circulo-pequeño-blanco"></div>
+                        </div>
+                    </div>
+                    <div class="contenedor-luces-pequeñas">
+                        <div class="luz-roja">
+                            <div class="punto-rojo"></div>
+                        </div>
+                        <div class="luz-amarilla">
+                            <div class="punto-amarillo"></div>
+                        </div>
+                        <div class="luz-amarilla">
+                            <div class="punto-amarillo"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Inicia contenedor de la pantalla-->
+            <div class="contenedor-pantalla">
+                <div class="pantalla">
+                    <div class="pantalla-principal" id="pantallaprincipal">
+                        <img  id="imgPokemon"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/39.png" width="120px" height="120px">
+                    </div>
+                    <div class="luces-pantalla">
+                        <div class="luz-roja-inferior">
+                            <div class="punto-rojo-inferior"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Termina contenedor de la pantalla--> 
+            <!--Inicia contenedor de botones-->
+            <div class="contenedor-botones">
+                <div class="contenedor-botones-superiores">
+                    <div class="boton-redondo"></div>
+                    <div class="botones-largos">
+                        <div class="boton-rojo"></div>
+                        <div class="boton-azul"></div>
+                    </div>
+                </div>
+                <div class="contenedor-botones-inferiores">
+                    <div class="minipantalla">
+                        <p id="pantallaName">Welcome</p>
+                    </div>
+                    <div class="contenedor-botones-derechos">
+                        <div class="contenedor-dipad">
+                            <div class="centro"></div>
+                            <div class="vertical"></div>
+                            <div class="horizontal">
+                                <div class="borde-arriba"></div>
+                                <div class="borde-abajo"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <!--Termina contenedor de botones-->         
+        </div>
+        <!--Termina panel izquierdo-->
+        <!--Inicia panel derecho-->
+        <div id="panel-derecho">
+            <!--Inicia parte curva de panel derecho-->
+            <div class="contenedor-vacio">
+                <svg class="curva-derecha" viewBox="0 0 500 150" preserveAspectRatio="none" width="228" height="70" ;>
+                    <path d="M-1.69,63.66 C239.27,35.05 142.77,155.44 505.64,140.63 L500.56,-67.58 L0.00,-71.52 Z"
+                        style="stroke: none; fill: white;">
+                    </path>
+                    <path d="M-3.69,63.66 C239.27,35.05 142.77,155.44 505.64,140.63 L500.56,-67.58 L0.00,-71.52 Z"
+                        style="stroke: #4b0712; stroke-width: 4; fill:none;">
+                    </path>
+                </svg>         
+            </div>
+            <!--Termina parte curva del panel-->
+            <div class="contenedor-pantalla-caracteristicas">
+                <div id="stats" class="panel-pantalla">
+                    <p id="idTipo">Tipo: </p>
+                    <p id="idAtaque">Ataque: </p>
+                    <p id="idDefensa">Defensa: </p>
+                    <p id="idVelocidad">Velocidad: </p>
+                </div>
+            </div>
+            <!--Contenedor de barra de botones-->
+            <div class="contenedor-barra-botones">
+                <div class="botones-cuadrados">
+                    <div class="boton-cuadrado"></div>
+                    <div class="boton-cuadrado"></div>
+                    <div class="boton-cuadrado"></div>
+                    <div class="boton-cuadrado"></div>
+                    <div class="boton-cuadrado"></div>
+                    <div class="boton-cuadrado"></div>
+                    <div class="boton-cuadrado"></div>
+                    <div class="boton-cuadrado"></div>
+                    <div class="boton-cuadrado"></div>
+                    <div class="boton-cuadrado"></div>
+                </div>
+            </div>
+            <!--Termina contenedor de barra de botones-->
+            <!--Inicia contenedor de botones inferiores-->
+            <div class="contenedor-botones-pd-infe">
+                <div class="contenedor-botones-izquierdos">
+                    <div class="boton-blanco"></div>
+                    <div class="boton-blanco"></div>
+                </div>      
+                <div class="contenedor-botones-pd-derechos">
+                    <div class="botones-largos-pd">
+                        <div class="boton-largo"></div>
+                        <div class="boton-largo"></div>
+                    </div>
+                    <div class="boton-amarillo">
+                        <div class="punto-bt-amarillo"></div>
+                    </div>
+                </div>
+            </div>
+            <!--Terminar contenedor de botones inferiores-->
+            <!--Inicia contenedor de pantallas inferiores-->
+            <div class="contenedor-pantallas-pd-inferiores">
+                <div id="pantalla1" class="pantalla1-derecha">
+                    <p id="pantallaAltura">Altura: </p>
+                </div>
+                <div id="pantalla2" class="pantalla2-derecha">
+                    <p id="pantallaPeso">Peso: </p>
+                </div>
+            </div>
+            <!--Termina contenedor de pantallas inferiores-->
+        </div>
+    </div>
+</body>
+<footer>
+    <div class="separador">
+    </div>
+    <div class="pie">@2022 Diseñado por Lorena Oviedo<br>
+        Github: @LorenaOviedo
+    </div>  
+</footer>
+</html>
